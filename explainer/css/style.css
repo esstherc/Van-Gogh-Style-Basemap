@@ -190,7 +190,7 @@ section.hero-section::before {
 }
 
 section.step .content {
-    background: rgba(25, 53, 80, 0.85); /* Deep blue with transparency - slightly reduced to show background */
+    background: rgba(25, 53, 80, 0.85); /* Deep blue with transparency */
     padding: 2rem;
     border-radius: 8px;
     max-width: 100%;
@@ -201,7 +201,7 @@ section.step .content {
 
 section.step .content.full-width {
     width: 100%;
-    max-width: 1560px; /* 1200px * 1.3 */
+    max-width: 1560px; 
     margin: 0 auto;
 }
 
@@ -264,7 +264,7 @@ body:not(.map-active) #inspiration .content.full-width {
     width: 90%;
 }
 
-/* h1 is only used in hero section with .hero-title class, so no generic h1 styles needed */
+/* h1 is only used in hero section with .hero-title class, no generic h1 styles needed */
 
 h2 {
     font-size: 2rem;
