@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Gogh Style Map</title>
+    
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Mapbox GL JS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="scroll">
+        <div id="sections">
+            <!-- Hero Section - Full Page Starry Night Background -->
+            <section id="hero" class="step hero-section" data-step="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Turning Starry Night into a Map</h1>
+                    <p class="hero-caption">Yanbing Chen, 2025</p>
+                </div>
+            </section>
+
+            <!-- Inspiration Board Section -->
+            <section id="inspiration" class="step" data-step="inspiration">
+                <div class="content full-width">
+                    <h2>Impressionism on the Map
+                    </h2>
+                    <div class="inspiration-text">
+                        <p>To be honest, I've never considered myself an artistic person. I code much more often than I draw, and my exposure to art education growing up was limited. Many forms of modern or postmodern art feel distant to me, I often struggle to appreciate them in the way art students might.</p>
+                        
+                        <p>But when I think about drawing inspiration from art to create a map, one name immediately comes to mind: Vincent van Gogh. Regardless of time or personal taste, his works are universally regarded as beautiful and full of emotional movement.</p>
+                        
+                        <p>For this project, I wanted to see what would happen if I translated that impressionist sense of rhythm and color into cartographic form. This became my attempt to blend my analytical, code-oriented mindset with the expressive visual energy of Van Gogh's art.</p>
+                    </div>
+                    <div class="inspiration-board">
+                        <!-- polaroid-style images -->
+                        <div class="polaroid-grid">
+                            <div class="polaroid polaroid-horizontal" style="--rotation: 3;">
+                                <div class="polaroid-image-wrapper">
+                                    <img src="src/The Starry Night 1889.jpg" alt="The Starry Night">
+                                    <div class="polaroid-overlay">
+                                        <p class="masterpiece-title">The Starry Night</p>
+                                        <p class="masterpiece-year">1889</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="polaroid polaroid-vertical" style="--rotation: -5;">
+                                <div class="polaroid-image-wrapper">
+                                    <img src="src/Cafe Terrace at Night 1888.jpg" alt="Cafe Terrace at Night">
+                                    <div class="polaroid-overlay">
+                                        <p class="masterpiece-title">Cafe Terrace at Night</p>
+                                        <p class="masterpiece-year">1888</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="polaroid polaroid-horizontal" style="--rotation: -2;">
+                                <div class="polaroid-image-wrapper">
+                                    <img src="src/Wheatfield with Crows 1890.png" alt="Wheatfield with Crows">
+                                    <div class="polaroid-overlay">
+                                        <p class="masterpiece-title">Wheatfield with Crows</p>
+                                        <p class="masterpiece-year">1890</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Color Palette Section -->
+            <section id="color" class="step" data-step="color">
+                <div class="content full-width">
+                    <h2>Color Palette</h2>
+                    <div class="color-palette-container">
+                        <div class="color-swatches">
+                            <div class="color-swatch">
+                                <div class="swatch" style="background-color: #254b5e;"></div>
+                                <div class="color-code">#254b5e</div>
+                            </div>
+                            <div class="color-swatch">
+                                <div class="swatch" style="background-color: #21297e;"></div>
+                                <div class="color-code">#21297e</div>
+                            </div>
+                            <div class="color-swatch">
+                                <div class="swatch" style="background-color: #6d8eea;"></div>
+                                <div class="color-code">#6d8eea</div>
+                            </div>
+                            <div class="color-swatch">
+                                <div class="swatch" style="background-color: #56582d;"></div>
+                                <div class="color-code">#56582d</div>
+                            </div>
+                            <div class="color-swatch">
+                                <div class="swatch" style="background-color: #919449;"></div>
+                                <div class="color-code">#919449</div>
+                            </div>
+                            <div class="color-swatch">
+                                <div class="swatch" style="background-color: #c7c983;"></div>
+                                <div class="color-code">#c7c983</div>
+                            </div>
+                        </div>
+                        <p class="color-description">
+                            Van Gogh’s paintings are filled with vibrant contrasts that express emotion through color rather than form. This inspired me to build my color palette around his expressive contrasts of blue and yellow, tones that evoke both calmness and intensity in his paintings.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography Section -->
+            <section id="type" class="step" data-step="type">
+                <div class="content">
+                    <h2>Typography</h2>
+                    <p>A mix of handwritten and serif fonts was used to create visual hierarchy and match the hand-crafted style of the map. Dancing Script labels continents, countries, and minor settlements; IM FELL DW Pica clarifies state names; Italianno Regular highlights major settlements; and Courgette Regular distinguishes subdivisions. The varied styles bring texture and character while keeping the map visually balanced.</p>
+                </div>
+            </section> 
+
+            <!-- Interactive Map Section 1-->
+            <section id="sea" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Bathymetry as Brushstrokes</h2>
+                    <p>
+                        Van Gogh’s paintings often use multi-layered blues to convey emotion and energy rather than literal color. The bathymetry layer applies this approach, using a range of deep and light blue tones to represent ocean depth. The color choices are inspired by his brushwork, where variations in blue shades create a textured, flowing visual effect that suggests movement.</p>
+                </div>
+            </section>
+
+            <!-- Interactive Map Section 2-->
+            <section id="land" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Textured Lands</h2>
+                    <p>The land layer uses a deep teal base to complement the ocean’s color scheme. Inspired by Van Gogh’s use of warm yellow highlights against large areas of blue and dark tones, the national boundaries are drawn in warm beige with irregular dash patterns that evoke the look of hand-painted brush lines.</div>
+            </section>
+
+            <!-- Interactive Map Section 3-->
+            <section id="lake" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Waves on the Lakes</h2>
+                    <p>The lakes use an SVG pattern of repeating wave shapes to form a textured surface. This vector-based pattern enables a seamless visual transition across zoom levels, maintaining consistent wave details as users scroll through different map scales.</p>
+                </div>
+            </section>
+
+            <!-- Interactive Map Section 4-->
+            <section id="city" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Illuminated Roads</h2>
+                    <p>As the map zooms from regional to city scale, the roads shift to a bright yellow tone that stands out against the dark blue background. </p>
+                </div>
+            </section>
+
+            <!-- Interactive Map Section -->
+            <section id="location_1" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Starting from Science Hall</h2>
+                    <p>Let’s take a tour starting at Science Hall to explore how the map transitions across zoom levels. At this scale, yellow roads pop against the dark blue base, and building fills align with the land palette.</p>
+                </div>
+            </section>
+
+            <!-- Interactive Map Section -->
+            <section id="location_2" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Across Madison</h2>
+                    <p>Zooming out reveals the city’s structure, with bright yellow roads outlining the street network. The two lakes show subtle SVG wave textures, connecting local geography with the map’s broader visual rhythm.</p>
+                </div>
+            </section>
+
+            <!-- Interactive Map Section -->
+            <section id="location_3" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Within Wisconsin</h2>
+                    <p>At the state scale, the deep teal land and warm beige boundaries define Wisconsin’s outline.
+                        Major roads and cities become reference points, while smaller details fade to maintain clarity.</p>
+                </div>
+            </section>
+
+            <!-- Interactive Map Section -->
+            <section id="location_4" class="step" data-step="iframe">
+                <div class="content">
+                    <h2>Across North America</h2>
+                    <p>The map fully expands to reveal the continental view, where the bathymetry blues convey ocean depth and flow.
+                        The consistent color palette ties together each zoom level, from local detail to regional context.</p>
+                    <p>Pan and zoom to explore the map at different scales and regions!</p>
+                    </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Map container  -->
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
